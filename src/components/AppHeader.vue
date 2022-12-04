@@ -1,6 +1,8 @@
 <template>
-    <input type="text" placeholder="Search a movie" v-model="store.SearchText">
-    <button>Search</button>
+    <form @submit.prevent="$emit('performSearch')">
+        <input type="text" placeholder="Search a movie" v-model="store.SearchText" required>
+        <button type="submit" >Search</button>
+    </form>
 </template>
 
 <script>
